@@ -1,87 +1,75 @@
-# Welcome to React Router!
+# Quizin 🎯
 
-A modern, production-ready template for building full-stack React applications using React Router.
+Aplikasi kuis interaktif yang dibangun dengan React Router v7. Uji pengetahuan kamu dengan soal-soal trivia dari OpenTDB API.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+## 🛠️ Tech Stack
 
-## Features
+### Core
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+- **[React Router v7](https://reactrouter.com/)** - Client-side routing
+- **[TypeScript](https://www.typescriptlang.org/)** - Type-safe development
+- **[Vite](https://vitejs.dev/)** - Build tool & dev server
 
-## Getting Started
+### State Management & Data
 
-### Installation
+- **[Zustand](https://zustand-demo.pmnd.rs/)** - Lightweight state management
+- **Zustand Middleware** - Persist (localStorage), Shallow (optimized subscriptions)
+- **[OpenTDB API](https://opentdb.com/)** - Open Trivia Database untuk soal quiz
 
-Install the dependencies:
+### Styling & UI
+
+- **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework
+- **[React Icons](https://react-icons.github.io/react-icons/)** - Phosphor Icons library
+
+## 🚀 Memulai Project
+
+### Prasyarat
+
+- Node.js >= 18.0.0
+- npm atau pnpm atau bun
+
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/yourusername/quizin.git
+cd quizin
+```
+
+### 2. Install Dependencies
 
 ```bash
 npm install
 ```
 
-### Development
+### 3. Development Mode
 
-Start the development server with HMR:
+Jalankan development server dengan Hot Module Replacement:
 
 ```bash
 npm run dev
 ```
 
-Your application will be available at `http://localhost:5173`.
+Aplikasi akan tersedia di `http://localhost:5173`
 
-## Building for Production
+### 4. Build Production
 
-Create a production build:
+Buat production build:
 
 ```bash
 npm run build
 ```
 
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
+Jalankan production server:
 
 ```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
+npm start
 ```
 
-The containerized application can be deployed to any platform that supports Docker, including:
+## 🎮 Cara Menggunakan
 
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
+1. **Login** - Masukkan username di halaman home
+2. **Main Quiz** - Jawab 5 soal pilihan ganda dengan timer 30 detik per soal
+3. **Lihat Hasil** - Review skor Anda setelah quiz selesai
+4. **Main Lagi** - Reset quiz untuk mendapat soal baru
 
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
+Built with ❤️ using React Router v7 & Zustand

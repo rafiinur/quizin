@@ -51,7 +51,7 @@ export async function fetchQuestions(): Promise<any> {
 		const token = await getSessionToken();
 
 		const res = await fetch(
-			`https://opentdb.com/api.php?amount=5&category=20&difficulty=easy${token}`,
+			`https://opentdb.com/api.php?amount=5&category=20&difficulty=easy&token=${token}`,
 		);
 		const data = await res.json();
 

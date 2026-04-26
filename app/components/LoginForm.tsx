@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router";
 import { useQuizStore } from "~/stores/useQuizStore";
 import Button from "./Button";
 import InputText from "./InputText";
@@ -6,6 +7,7 @@ import InputText from "./InputText";
 const LoginForm = () => {
 	const [username, setUsername] = useState("");
 	const [error, setError] = useState("");
+	const navigate = useNavigate();
 
 	const login = useQuizStore((state) => state.login);
 
@@ -18,11 +20,11 @@ const LoginForm = () => {
 		}
 
 		login(username);
-		window.location.href = "/quiz";
+		navigate("/quiz");
 	};
 
 	return (
-		<form onSubmit={handleSubmit} className="space-y-6">
+		<form onSubmit={handleSubmit} className="space-y-6" aria-label="Form login">
 			<InputText
 				label="Username"
 				id="username"
@@ -32,7 +34,6 @@ const LoginForm = () => {
 					setError("");
 				}}
 				placeholder="Masukkan username..."
-				autoFocus
 				error={error}
 			/>
 

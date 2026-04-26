@@ -40,7 +40,11 @@ const Error = ({ responseCode }: { responseCode: number }) => {
 	};
 
 	return (
-		<div className="relative h-screen flex flex-col items-center justify-center text-zinc-50 bg-zinc-950 gap-6 p-4">
+		<div
+			className="relative h-screen flex flex-col items-center justify-center text-zinc-50 bg-zinc-950 gap-6 p-4"
+			role="alert"
+			aria-live="assertive"
+		>
 			<div className="text-center space-y-2 max-w-md">
 				<h2 className="text-2xl font-bold text-red-400">{config.title}</h2>
 				<p className="text-lg text-zinc-300">{config.message}</p>

@@ -4,10 +4,18 @@ import { useQuizStore } from "~/stores/useQuizStore";
 import LoginForm from "~/components/LoginForm";
 import type { Route } from "./+types/home";
 
-export function meta({}: Route.MetaArgs) {
+export function meta(_: Route.MetaArgs) {
 	return [
 		{ title: "Login - Quizin" },
-		{ name: "description", content: "Login" },
+		{
+			name: "description",
+			content: "Masuk ke Quizin dan mulai quiz trivia interaktif.",
+		},
+		{ property: "og:title", content: "Login - Quizin" },
+		{
+			property: "og:description",
+			content: "Masukkan username untuk memulai quiz trivia di Quizin.",
+		},
 	];
 }
 

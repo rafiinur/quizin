@@ -11,6 +11,25 @@ import type { Route } from "./+types/root";
 import "./app.css";
 import Spinner from "./components/Spinner";
 
+export const meta: Route.MetaFunction = () => [
+	{ title: "Quizin - Quiz Interaktif" },
+	{
+		name: "description",
+		content:
+			"Aplikasi quiz interaktif untuk menguji pengetahuanmu dengan soal trivia.",
+	},
+	{ name: "robots", content: "index, follow" },
+	{ property: "og:type", content: "website" },
+	{ property: "og:site_name", content: "Quizin" },
+	{ property: "og:title", content: "Quizin - Quiz Interaktif" },
+	{
+		property: "og:description",
+		content:
+			"Mainkan quiz trivia interaktif dengan timer dan lihat hasil skormu.",
+	},
+	{ name: "twitter:card", content: "summary_large_image" },
+];
+
 export const links: Route.LinksFunction = () => [
 	{ rel: "preconnect", href: "https://fonts.googleapis.com" },
 	{
@@ -38,6 +57,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 			<head>
 				<meta charSet="utf-8" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<meta name="theme-color" content="#09090b" />
 				<Meta />
 				<Links />
 			</head>

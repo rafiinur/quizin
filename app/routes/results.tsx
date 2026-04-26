@@ -15,7 +15,16 @@ import StatItem from "~/components/StatItem";
 export function meta() {
 	return [
 		{ title: "Hasil Quiz - Quizin" },
-		{ name: "description", content: "Hasil pengerjaan quiz" },
+		{
+			name: "description",
+			content:
+				"Lihat skor akhir, jawaban benar/salah, dan ringkasan hasil quiz kamu.",
+		},
+		{ property: "og:title", content: "Hasil Quiz - Quizin" },
+		{
+			property: "og:description",
+			content: "Ringkasan hasil quiz interaktif di Quizin.",
+		},
 	];
 }
 

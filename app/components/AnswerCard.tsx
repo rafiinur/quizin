@@ -19,11 +19,12 @@ const AnswerCard = ({ answer, choice }: AnswerCardProps) => {
 		<button
 			type="button"
 			onClick={handleAnswer}
+			aria-label={`Pilihan ${choiceLabels[choice]}: ${sanitize(answer)}`}
 			className="
                 group relative w-full p-6 text-left transition-all duration-300 border rounded-xl
                 bg-zinc-900/50 border-zinc-700 
                 hover:bg-zinc-800 hover:border-blue-500 hover:shadow-lg hover:shadow-blue-500/10 
-                cursor-pointer active:scale-[0.98]
+                cursor-pointer active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950
             "
 		>
 			<div className="flex items-center gap-4">

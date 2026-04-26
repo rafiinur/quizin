@@ -5,10 +5,10 @@ const QuestionCard = ({ question }: { question: string }) => {
 			<div className="absolute top-0 inset-x-0 h-px bg-linear-to-r from-transparent via-zinc-700 to-transparent opacity-50" />
 
 			<div className="relative z-10 flex flex-col items-center justify-center min-h-40">
-				<p
+				<h2
 					className="text-center text-2xl md:text-3xl lg:text-4xl font-semibold text-zinc-100 leading-relaxed tracking-tight max-w-prose"
 					dangerouslySetInnerHTML={{ __html: question }}
-				></p>
+				/>
 			</div>
 
 			<div className="absolute bottom-0 inset-x-0 h-px bg-linear-to-r from-transparent via-zinc-700 to-transparent opacity-50" />

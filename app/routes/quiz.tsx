@@ -14,8 +14,20 @@ import Error from "~/components/Error";
 import type { Route } from "./+types/quiz";
 import type { Question } from "~/types/quiz";
 
-export function meta({}: Route.MetaArgs) {
-	return [{ title: "Quizin" }, { name: "description", content: "Quizin" }];
+export function meta(_: Route.MetaArgs) {
+	return [
+		{ title: "Main Quiz - Quizin" },
+		{
+			name: "description",
+			content:
+				"Jawab soal trivia, kejar skor terbaik, dan selesaikan quiz tepat waktu.",
+		},
+		{ property: "og:title", content: "Main Quiz - Quizin" },
+		{
+			property: "og:description",
+			content: "Mainkan quiz interaktif dengan timer dan lihat performa kamu.",
+		},
+	];
 }
 
 export async function clientLoader() {

@@ -19,7 +19,7 @@ export const getCachedQuestions = () => {
 		}
 
 		return null;
-	} catch (error) {
+	} catch {
 		return null;
 	}
 };
@@ -57,7 +57,6 @@ export async function fetchQuestions(): Promise<any> {
 
 		// Handle error jika token bermasalah
 		if (data.response_code === 3 || data.response_code === 4) {
-			// Reset token dan coba fetch ulang
 			try {
 				await fetch(
 					`https://opentdb.com/api_token.php?command=reset&token=${token}`,
